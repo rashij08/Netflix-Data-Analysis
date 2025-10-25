@@ -1,53 +1,63 @@
-# 🎬 Netflix Content Clustering & Analysis
+# 🎬 Netflix Data Analysis (EDA)
 
 ## 📌 Project Overview
-This project analyzes and clusters Netflix’s vast catalog of movies and TV shows using machine learning and visualization techniques.  
-The goal is to perform **content-based clustering** to group similar shows/movies together based on features such as **genre, rating, description, and duration**.
-
-By identifying content clusters, Netflix can enhance its **recommendation system**, understand **content trends**, and improve **strategic decision-making**.
+This project focuses on analyzing Netflix’s extensive catalog of movies and TV shows to uncover insights about content distribution, genres, ratings, countries, and release trends.  
+The goal is to perform **Exploratory Data Analysis (EDA)** on the Netflix dataset to identify meaningful patterns and support strategic decision-making related to content creation, audience targeting, and platform growth.
 
 ---
 
 ## 🎯 Business Objective
-- Segment Netflix’s catalog using **K-Means clustering** and **TF-IDF text representation**.
-- Identify content similarities and trends based on genre, rating, and description.
-- Support **data-driven recommendations** and **content strategy optimization**.
+The main objective of this analysis is to explore Netflix’s content data to:
+- Understand the **distribution of movies and TV shows** across countries and years.
+- Identify **popular genres, ratings, and trends** over time.
+- Analyze **regional and temporal patterns** in Netflix’s content library.
+- Generate data-driven insights that can help Netflix improve its **recommendation systems**, **content strategy**, and **marketing decisions**.
 
 ---
 
 ## 🧠 Technologies Used
 - **Python**
-- **Pandas, NumPy** – Data handling
+- **Pandas, NumPy** – Data Cleaning and Manipulation
 - **Matplotlib, Seaborn** – Data Visualization
-- **Scikit-learn (TF-IDF, PCA, KMeans)** – Machine Learning
-- **Jupyter Notebook** – Development Environment
+- **Jupyter Notebook** – Interactive Analysis Environment
 
 ---
 
-## 🧹 Steps Followed
-1. Data Cleaning & Preprocessing 
-   - Removed missing values and duplicates  
-   - Cleaned categorical fields (`type`, `country`, `rating`, etc.)
+## 🧹 Data Preprocessing
+- Handled **missing values** and **duplicates** in key columns.
+- Cleaned and standardized text-based fields like `country`, `rating`, and `listed_in`.
+- Converted columns such as `date_added` into **datetime format** for time-based analysis.
+- Extracted new features like `year_added` for deeper insights.
+- Ensured the dataset was clean and ready for visualization.
 
-2. Exploratory Data Analysis (EDA) 
-   - Created 15+ insightful charts (Univariate, Bivariate, Multivariate)  
-   - Key insights on countries, genres, ratings, and release trends
+---
 
-3. Feature Extraction (TF-IDF) 
-   - Converted textual `description` into numerical vectors  
+## 📊 Exploratory Data Analysis (EDA)
+The EDA section involves visual exploration to understand the dataset’s structure and patterns.  
+It is divided into three parts based on the **UBM (Univariate, Bivariate, Multivariate)** approach:
 
-4. Dimensionality Reduction (PCA)
-   - Reduced features for better visualization and clustering efficiency  
+### 🔹 **Univariate Analysis**
+Analyzed individual variables to understand their distribution and characteristics.
+- **Chart 1:** Count of Movies vs. TV Shows  
+- **Chart 2:** Top 10 Countries Producing Netflix Content  
+- **Chart 3–13:** Further visualizations covering genres, ratings, durations, release years, and trends.
 
-5. Clustering (K-Means) 
-   - Segmented content into groups based on similarity  
+### 🔹 **Bivariate Analysis**
+Studied relationships between two variables such as:
+- Type vs. Rating  
+- Country vs. Genre  
+- Release Year vs. Type  
 
-6. Cluster Evaluation & Visualization 
-   - Visualized content clusters and analyzed dominant genres per cluster  
+### 🔹 **Multivariate Analysis**
+Examined the combined influence of multiple factors (e.g., genre, rating, and release year) to identify deeper trends.
+
+---
+
+## 🪄 Key Insights (Till EDA)
+- **Movies dominate** the Netflix catalog compared to TV shows.  
+- **USA, India, and UK** are the top three content-producing countries.  
+- A significant surge in new content was observed **after 2015**, showing Netflix’s rapid global expansion.  
+- **Dramas, Comedies, and International Movies** are the most frequent genres.  
+- **TV-MA and TV-14** are the most common ratings, showing a focus on mature and teen audiences.
 
 
-
-## 💼 Business Impact
-- Enhanced content recommendation for users.
-- Helped Netflix identify content gaps and underrepresented genres.
-- Guided regional marketing and production planning.
